@@ -65,15 +65,16 @@ class DrawCerebro(multiprocessing.Process):
         Returns:
              rgb_array.
         """
-        fig = self.cerebro.plot(plotter=self.plotter,  # Modified above plotter class, doesnt actually saves anything.
+        fig = self.cerebro.plot(# plotter=self.plotter,  # Modified above plotter class, doesnt actually saves anything.
                                 # savefig=True,
                                 # width=self.width,
                                 # height=self.height,
                                 # dpi=self.dpi,
-                                use=self.use,
+                                # use=self.use,
                                 # iplot=False,
-                                rowsmajor=self.rowsmajor,
+                                # rowsmajor=self.rowsmajor,
                                 # figfilename='_tmp_btgym_render.png',
+                                volume=False
                                )[0][0]
         
         fig.set_size_inches(18,10)
